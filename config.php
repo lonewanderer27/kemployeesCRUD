@@ -1,15 +1,15 @@
 <?php
-$user = "seed";
-$pass = "seed";
+$user = "root";
+$pass = "";
 $server = "database";
-$dbname = "employees";
+$db = "employees";
 
-//$user = "seed";
-//$pass = "seed";
+//$user = "root";
+//$pass = "";
 //$server = "localhost";
-//$dbname = "records";
+//$db = "records";
 
-$conn = new mysqli($server, $user, $pass, $dbname);
+$conn = new mysqli($server, $user, $pass, $db);
 if ($conn->connect_error) {
     die("Connection Error: " . $conn->connect_error);
 }
