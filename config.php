@@ -7,7 +7,7 @@ $dbname = "employees";
 //$user = "seed";
 //$pass = "seed";
 //$server = "localhost";
-//$dbname = "employees";
+//$dbname = "records";
 
 $conn = new mysqli($server, $user, $pass, $dbname);
 if ($conn->connect_error) {
