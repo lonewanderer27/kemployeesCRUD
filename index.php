@@ -45,9 +45,9 @@ if (isset($_GET['token'])) {
     } else {
         echo $conn->error;
     }
-    $btn = '<input class="btn btn-warning btn-lg" type="submit" name="btnUpdate" value="UPDATE INFORMATION">';
+    $btn = '<input class="btn btn-warning btn-lg" type="submit" name="btnUpdate" value="Update Information">';
 } else {
-    $btn = '<input class="btn btn-primary btn-lg" type="submit" name="btnSubmit" value="SAVE INFORMATION">';
+    $btn = '<input class="btn btn-primary btn-lg" type="submit" name="btnSubmit" value="Add Information">';
 }
 ?>
 
@@ -88,9 +88,12 @@ if (isset($_GET['token'])) {
                 }
                 ?>
             </select>
-            <?php
-            echo $btn;
-            ?>
+            <?php echo $btn; ?>
+            <?php if(isset($id)): ?>
+                <a class="btn btn-primary btn-lg me-2" href="/index.php">
+                    Back
+                </a>
+            <?php endif; ?>
         </form>
 
         <table class="table table-bordered table-hover table-striped" id="employeesTb">

@@ -4,11 +4,11 @@ include('config.php');
 global $conn;
 $current_date = date('d-M-y');
 
-$Fname = $_POST['Fname'];
-$Lname = $_POST['Lname'];
-$Email = $_POST['Email'];
-$Phone = $_POST['Phone'];
-$JobTitle = $_POST['JobTitle'];
+$Fname = trim($_POST['Fname']);
+$Lname = trim($_POST['Lname']);
+$Email = trim($_POST['Email']);
+$Phone = trim($_POST['Phone']);
+$JobTitle = trim($_POST['JobTitle']);
 
 // Finding duplicates
 $sql = "SELECT EmployeeID FROM employees WHERE EmployeeFN = '$Fname' AND EmployeeLN = '$Lname'";
