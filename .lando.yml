@@ -1,0 +1,8 @@
+name: kemployeescrud
+recipe: lamp
+services:
+  phpmyadmin:
+    type: phpmyadmin
+config:
+  database: mysql
+  webroot: .
